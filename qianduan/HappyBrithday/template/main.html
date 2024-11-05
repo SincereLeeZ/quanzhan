@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>流星雨＆生日祝福</title>
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+        font-family: "Your Chosen Font", cursive;
+      }
+
+      #stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      @keyframes snowfall {
+        0% {
+          transform: translateY(-100%);
+        }
+
+        100% {
+          transform: translateY(100vh);
+        }
+      }
+
+      #slideshow {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        /* 添加这行代码使其居中 */
+      }
+
+      #slideshow img {
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* 居中对齐 */
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      #slideshow img.active {
+        opacity: 1;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.7);
+        /* 白色，70% 不透明 */
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        position: fixed;
+        /* 将容器固定在页面上 */
+        top: 50%;
+        /* 垂直居中 */
+        left: 50%;
+        /* 水平居中 */
+        transform: translate(-50%, -50%);
+        /* 精确居中 */
+        z-index: 1000;
+        /* 确保容器在最顶层 */
+      }
+
+      h1 {
+        color: #efefef;
+        font-size: 28px;
+        margin-bottom: 10px;
+        /* 调整标题和图片之间的间距 */
+      }
+
+      img {
+        width: 300px;
+        border-radius: 50%;
+        margin: 1px 0px;
+        /* 调整图片和下方文字之间的间距 */
+      }
+
+      p {
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      @keyframes blinkAnimation {
+        0% {
+          opacity: 0;
+        }
+
+        50% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .fade-in {
+        opacity: 0;
+        animation: blinkAnimation 3s infinite alternate;
+      }
+
+      @keyframes fadeInAnimation {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      #countdown {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .time {
+        font-size: 36px;
+        margin: 0 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        animation-fill-mode: forwards;
+      }
+
+      #days {
+        background-color: #f5f5f5;
+      }
+
+      #hours {
+        background-color: #e0e0e0;
+      }
+
+      #minutes {
+        background-color: #d5d5d5;
+      }
+
+      #seconds {
+        background-color: #cccccc;
+      }
+
+      .time span {
+        display: inline-block;
+        font-size: 14px;
+        margin-top: 5px;
+        color: #333;
+      }
+
+      .ribbon {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .ribbon:before,
+      .ribbon:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to bottom, #ff69b4, #ffc3a0, #ffafbd);
+        border-radius: 50%;
+        opacity: 0.6;
+        animation: ribbonAnimation 2s infinite;
+      }
+
+      .ribbon:before {
+        top: -100px;
+        left: -50px;
+      }
+
+      .ribbon:after {
+        top: -100px;
+        right: -50px;
+      }
+
+      /* 定义彩带动画 */
+      @keyframes ribbonAnimation {
+        0% {
+          transform: translate(0, 0) rotate(0);
+        }
+
+        100% {
+          transform: translate(-800px, -800px) rotate(360deg);
+        }
+      }
+
+      /* 使 h2 向左偏移 20px */
+      .container h2 {
+        position: relative;
+        left: 50px;
+        /* 向左偏移 20px */
+        text-align: left;
+        /* 使文本左对齐 */
+      }
+
+      .container h3 {
+        position: relative;
+        right: 50px;
+        /* 向左偏移 20px */
+        text-align: right;
+        /* 使文本左对齐 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="liuxing-container">
+      <canvas id="stars"></canvas>
+    </div>
+
+    <div class="container">
+      <div class="fade-in">
+        <h1>The day belongs to you</h1>
+      </div>
+      <div id="slideshow">
+        <img src="images/1.jpg" alt="Image 1" class="active" />
+        <img src="images/2.jpg" alt="Image 2" />
+        <img src="images/3.jpg" alt="Image 3" />
+      </div>
+
+      <h2>To</h2>
+      <p>猝不及防，成长不期而遇</p>
+      <p>愿所有的美好如期而至</p>
+      <p>愿每一岁都能奔走在自己的热爱里</p>
+      <p>祝你生日快乐！</p>
+      <h3>From </h3>
+    </div>
+    <div>
+      <audio src="./music.mp3" controls autoplay loop></audio>
+    </div>
+
+    <script src="liuxing.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var currentIndex = 0;
+        var slides = $("#slideshow img");
+        var slideCount = slides.length;
+
+        function showSlide(index) {
+          slides.removeClass("active");
+          slides.eq(index).addClass("active");
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % slideCount;
+          showSlide(currentIndex);
+        }
+
+        // 自动播放幻灯片
+        setInterval(nextSlide, 3000);
+
+        // 初始化显示第一张幻灯片
+        showSlide(currentIndex);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,489 @@
+/* 基础设置 */
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/* #region top-bar */
+.topbar {
+    height: 30px;
+    background-color: #ECECEC;
+}
+
+.welcome {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0;
+    color: #666;
+}
+
+.welcome span,
+.welcome a {
+    font-size: 12px;
+}
+
+.welcome .pls {
+    margin-left: 28px;
+}
+
+.welcome .login {
+    padding-right: 10px;
+    border-right: 1px black solid
+}
+
+.welcome .register {
+    padding-left: 10px;
+}
+
+.topbar-nav .list {
+    height: 30px;
+    line-height: 30px;
+}
+
+.topbar-nav .list li {
+    float: left;
+}
+
+.topbar-nav .list li a {
+    padding: 0 15px;
+    border-right: #666 1px solid;
+}
+
+.topbar-nav .list li:first-child a {
+    padding-left: 0px;
+}
+
+.topbar-nav .list li:last-child a {
+    padding-right: 0px;
+    border: 0;
+}
+
+/*#endregion 顶部导航条end  */
+/* #region header */
+.header {
+    height: 120px;
+    width: 1190px;
+    margin: auto;
+
+}
+
+.header .search form {
+    margin-top: 42px;
+    font-size: 0;
+    /*消除输入框和按钮之间的缝隙*/
+}
+
+.header .search input {
+    width: 508px;
+    height: 34px;
+    border: 1px solid skyblue;
+}
+
+.header .search button {
+    width: 80px;
+    height: 36px;
+    background-color: skyblue;
+    vertical-align: top;
+    /* 按钮与输入框的文字基线不同 */
+    background-image: url('../images/serch_icon.png');
+    /* 不让背景图片重复 */
+    background-repeat: no-repeat;
+    background-position: 28px 6px;
+}
+
+/* #endregion头部end */
+/* #region top-nav */
+.main-nav {
+    height: 48px;
+    border-bottom: 1px solid skyblue;
+}
+
+.main-nav .all-types {
+    height: 48px;
+    width: 190px;
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    /* 设置文本行高，这里设置的和导航条区域一样高来让字体竖向居中 */
+    line-height: 48px;
+    font-size: 16px;
+}
+
+.main-nav-list {
+    height: 48px;
+    line-height: 48px;
+
+}
+
+.main-nav-list li {
+    float: left;
+    margin: 0px 10px;
+    font-size: 16px;
+}
+
+/* .main-nav-list li:hover{
+    background-color: skyblue;
+}
+.main-nav-list li:hover a{
+    color: white;
+} */
+/* #endregion 主导航区 */
+/* #region content */
+.main-content {
+    margin-top: 10px;
+}
+
+.main-content .side-nav {
+    width: 190px;
+    height: 458px;
+    background-color: #ECECEC;
+    position: relative;
+}
+
+.main-content .side-nav li {
+    font-size: 14px;
+    height: 28px;
+    /* 背景色不填充margin,换成padding就好了 */
+    padding-left: 16px;
+    line-height: 28px;
+
+
+}
+
+.main-content .side-nav li:hover {
+    background-color: skyblue;
+}
+
+/* 这是一个悬浮菜单的设置方法 使用display:none和display:block配合 */
+.main-content .side-nav li:hover .second-menu {
+    display: block;
+}
+
+.main-content .side-nav li:hover>a {
+    color: white;
+}
+
+.second-menu {
+    width: 680px;
+    height: 458px;
+    background-color: white;
+    padding-left: 20px;
+    /* 子元素相对定位 父元素绝对定位 定位可以覆盖padding*/
+    /* 父元素定位不便时直接找祖元素定位 */
+    position: absolute;
+    top: 0px;
+    left: 190px;
+    display: none;
+}
+
+.second-menu dl {
+    height: 36px;
+    line-height: 36px;
+}
+
+.second-menu dl:first-child {
+    margin-top: 10px;
+}
+
+.second-menu dt {
+    float: left;
+    width: 70px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.second-menu dd {
+    float: left;
+}
+
+.second-menu dd a {
+    padding: 0 10px;
+    border-left: 1px solid #666;
+}
+
+.main-content .side-nav img {
+    width: 190px;
+    margin-top: 15px;
+}
+
+.main-content .banner {
+    width: 690px;
+    height: 458px;
+    background-color: skyblue;
+    margin: 0px 10px;
+}
+
+.main-content .side-other {
+    width: 290px;
+    height: 458px;
+}
+
+.side-other .news {
+    width: 260px;
+    height: 156px;
+    padding: 0px 14px;
+    border: 1px solid #d9d9d9;
+}
+
+.side-other .news .title {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.side-other .news .title span {
+    font-size: 14px;
+}
+
+.side-other .news .title a {
+    font-size: 12px;
+}
+
+.side-other .news .news-list li {
+    height: 26px;
+    line-height: 26px;
+}
+
+.side-other .other-nav {
+    margin-top: 10px;
+    width: 290px;
+    height: 290px;
+}
+
+.other-nav-list:first-child {
+    padding-top: 16px;
+}
+
+.other-nav-list:nth-child(2) {
+    margin: 17px 0px;
+}
+
+.other-nav-list li {
+    width: 48px;
+    height: 70px;
+    margin: 0px 11px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.other-nav-list li:first-child {
+    margin-left: 16px;
+}
+
+.other-nav-list .picture {
+    width: 48px;
+    height: 48px;
+    /* 精灵图渲染比较快 */
+    background-image: url(../images/精灵图-侧边功能.png);
+}
+
+/* #region 精灵图*/
+.other-nav-list:nth-child(1) li:nth-child(1) .picture {
+    background-position: 0px 0px;
+}
+
+.other-nav-list:nth-child(1) li:nth-child(2) .picture {
+    background-position: -48px 0px;
+}
+
+.other-nav-list:nth-child(1) li:nth-child(3) .picture {
+    background-position: -96px 0px;
+}
+
+.other-nav-list:nth-child(1) li:nth-child(4) .picture {
+    background-position: -144px 0px;
+}
+
+.other-nav-list:nth-child(2) li:nth-child(1) .picture {
+    background-position: 0px -48px;
+}
+
+.other-nav-list:nth-child(2) li:nth-child(2) .picture {
+    background-position: -48px -48px;
+}
+
+.other-nav-list:nth-child(2) li:nth-child(3) .picture {
+    background-position: -96px -48px;
+}
+
+.other-nav-list:nth-child(2) li:nth-child(4) .picture {
+    background-position: -144px -48px;
+}
+
+.other-nav-list:nth-child(3) li:nth-child(1) .picture {
+    background-position: 0px -96px;
+}
+
+.other-nav-list:nth-child(3) li:nth-child(2) .picture {
+    background-position: -48px -96px;
+}
+
+.other-nav-list:nth-child(3) li:nth-child(3) .picture {
+    background-position: -96px -96px;
+}
+
+.other-nav-list:nth-child(3) li:nth-child(4) .picture {
+    background-position: -144px -96px;
+}
+
+/* #endregion */
+/* 底部图片区 */
+.bottom-pic .container img {
+    float: left;
+    margin: 10px 5px;
+}
+
+.container img:nth-child(1) {
+    margin-left: 0px;
+}
+
+.container img:nth-child(4) {
+    margin-right: 0px;
+}
+
+/* 楼层 */
+.floor {
+    margin-top: 48px;
+}
+
+.floor-name {
+    font-size: 20px;
+}
+
+.floor-nav {
+    height: 30px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid skyblue;
+    line-height: 30px;
+}
+
+.floor-nav-list li {
+    float: left;
+    font-size: 14px;
+}
+
+.floor-nav-list li a {
+    padding: 0px 10px;
+    border-right: 1px solid #666;
+}
+
+.floor-nav-list li:first-child a {
+    padding-left: 0px;
+}
+
+.floor-nav-list li:last-child a {
+    padding-right: 0px;
+    border-right: 0px;
+}
+
+.floor-info .floor-info-item {
+    float: left;
+}
+
+.floor-info .item1 {
+    width: 190px;
+    height: 392px;
+    background-color: #f4f4f4;
+    padding: 20px
+}
+
+.item1-list {
+    margin-bottom: 29px;
+}
+
+.item1-list li {
+    width: 90px;
+    height: 22px;
+    padding-bottom: 3.5px;
+    border-bottom: 1px solid #666;
+    font-size: 16px;
+    text-align: center;
+}
+
+.item1-list li:nth-child(2n-1) {
+    float: left;
+}
+
+.item1-list li:nth-child(2n) {
+    float: right;
+}
+
+.item1-list li:nth-child(3),
+.item1-list li:nth-child(4) {
+    margin: 14px 0px;
+}
+
+.floor-info .item2 {
+    width: 335px;
+    height: 432px;
+}
+
+.floor-info .item3,
+.floor-info .item4,
+.floor-info .item5 {
+    width: 206px;
+    height: 432px;
+}
+
+.floor-info .item3 img,
+.floor-info .item4 img,
+.floor-info .item5 img {
+    border-bottom: 1px solid #e2e2e2;
+}
+.floor-info .item3,
+.floor-info .item4{
+    border-right: 1px solid #e2e2e2;
+}
+
+/* #endregion 主内容区 */
+/* #region footer */
+.footer{
+    margin-top: 48px;
+    height: 100px;
+    background-color: #483e3e;
+}
+.links-list{
+    float: left;
+    width: 190px;
+    height: 26px;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+.links-list:last-child{
+    margin-right: 0px;
+}
+.links-list a{
+    color: white;
+}
+.line{
+    height: 1px;
+    background-color:red;
+    margin-top: 2px;
+}
+.bottom-links{
+    text-align: center;
+}
+.bottom-links-list{
+    display: inline-block;
+}
+.bottom-links-list li{
+    float: left;
+}
+.bottom-links-list li a{
+    padding: 0px 26px;
+    border-right: 1px solid white;
+    color: white;
+}
+.bottom-links-list li:first-child a{
+    padding-left: 0px;
+}
+.bottom-links-list li:last-child a{
+    padding-right: 0px;
+    border: 0px;
+}
+.beian{
+    color: white;
+    text-align: center;
+}
+/* #endregion footer */

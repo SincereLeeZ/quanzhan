@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原石交易所</title>
+    <!-- 引入页签图标 -->
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 顶部导航条 -->
+    <div class="topbar">
+        <div class="container clearfix"> <!-- 版心 -->
+            <!-- 左侧的欢迎区 -->
+            <div class="welcome leftfix">
+                <span>欢迎来到原石交易所</span>
+                <span class="pls">请</span>
+                <a href="https://ak.hypergryph.com/user/login" class="login">唤醒</a>
+                <a href="https://ak.hypergryph.com/user/login" class="register">免费上传意识</a>
+            </div>
+            <!-- 右侧的导航区 -->
+            <div class="topbar-nav rightfix">
+                <ul class="list clearfix">
+                    <li><a href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default" >我的订单</a></li>
+                    <li><a href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default">我的抽卡</a></li>
+                    <li><a href="https://www.bilibili.com/read/cv16958899">原神大月卡</a></li>
+                    <li><a href="#">原神小月卡</a></li>
+                    <li><a href="https://ak.hypergryph.com/">源石采购</a></li>
+                    <li><a href="https://ys.mihoyo.com/?utm_source=backup205&from_channel=backup205#/">关注原神</a></li>
+                    <li><a href="https://www.mihoyo.com/?page=join" >加入米哈游</a></li>
+                    <li><a href="images/get-money.jpg" target="_blank">原石充值</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 头部 -->
+        <div class="header">
+            <div class="container">
+                <!-- 左侧logo区域 -->
+                <div class="logo leftfix">
+                    <img src="./images/yuanshen.png" alt="logo" height="120px">
+                </div>
+                <!-- 右侧搜索区域 -->
+                <div class="search rightfix">
+                    <form action="#">
+                        <input type="text">
+                        <button onclick="search()"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- top-nav -->
+        <div class="main-nav">
+            <div class="container">
+                <div class="all-types leftfix">采购中心</div>
+                <ul class="main-nav-list leftfix clearfix">
+                    <li><a href="#">相遇之缘</a></li>
+                    <li><a href="#">纠缠之缘</a></li>
+                    <li><a href="#">命途回响</a></li>
+                    <li><a href="#">瑞克五代</a></li>
+                    <li><a href="#">礼堂丁真</a></li>
+                    <li><a href="#">小马珍珠</a></li>
+                    <li><a href="#">角色</a></li>
+                    <li><a href="#">圣遗物</a></li>
+                    <li><a href="#">光锥</a></li>
+                    <li><a href="#">别点这一行</a></li>
+                    <li><a href="#">点了没反应</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- content -->
+        <div class="main-content">
+            <div class="container clearfix">
+                <ul class="side-nav leftfix">
+                    <li>
+                        <!-- 一级菜单 -->
+                        <a href="#">手机/运营商/数码/流量</a>
+                        <div class="second-menu">
+                            <dl class="clearfix">
+                                <dt><a href="#">手机品牌</a></dt>
+                                <dd><a href="#">遥遥领先</a></dd>
+                                <dd><a href="#">华为</a></dd>
+                                <dd><a href="#">小米</a></dd>
+                                <dd><a href="#">vivo</a></dd>
+                                <dd><a href="#">oppo</a></dd>
+                                <dd><a href="#">垃圾苹果</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">垃圾回收</a></dt>
+                                <dd><a href="#">传家宝</a></dd>
+                                <dd><a href="#">50</a></dd>
+                                <dd><a href="#">rmb</a></dd>
+                                <dd><a href="#">不能</a></dd>
+                                <dd><a href="#">再多了</a></dd>
+                                <dd><a href="#">知道不</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">肯德基</a></dt>
+                                <dd><a href="#">疯狂</a></dd>
+                                <dd><a href="#">星期四</a></dd>
+                                <dd><a href="#">还是</a></dd>
+                                <dd><a href="#">太贵</a></dd>
+                                <dd><a href="#">我不</a></dd>
+                                <dd><a href="#">吃了</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">不知道</a></dt>
+                                <dd><a href="#">应该要</a></dd>
+                                <dd><a href="#">写什么</a></dd>
+                                <dd><a href="#">那就</a></dd>
+                                <dd><a href="#">随便</a></dd>
+                                <dd><a href="#">写一</a></dd>
+                                <dd><a href="#">点了</a></dd>
+                            </dl>
+                        </div>
+                    </li>   
+                    <li>
+                        <a href="#">高价/回收/彩电/电脑</a>
+                        <div class="second-menu">
+                            <dl class="clearfix">    
+                                <dt><a href="#">肯德基</a></dt>
+                                <dd><a href="#">疯狂</a></dd>
+                                <dd><a href="#">星期四</a></dd>
+                                <dd><a href="#">还是</a></dd>
+                                <dd><a href="#">太贵</a></dd>
+                                <dd><a href="#">我不</a></dd>
+                                <dd><a href="#">吃了</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">你只</a></dt>
+                                <dd><a href="#">需要</a></dd>
+                                <dd><a href="#">知道</a></dd>
+                                <dd><a href="#">这是</a></dd>
+                                <dd><a href="#">二级</a></dd>
+                                <dd><a href="#">菜单</a></dd>
+                                <dd><a href="#">就行了</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">旧手机/烂手机/破手机</a>
+                        <div class="second-menu">
+                            <dl class="clearfix">    
+                                <dt><a href="#">肯德基</a></dt>
+                                <dd><a href="#">疯狂</a></dd>
+                                <dd><a href="#">星期四</a></dd>
+                                <dd><a href="#">还是</a></dd>
+                                <dd><a href="#">太贵</a></dd>
+                                <dd><a href="#">我不</a></dd>
+                                <dd><a href="#">吃了</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">你只</a></dt>
+                                <dd><a href="#">需要</a></dd>
+                                <dd><a href="#">知道</a></dd>
+                                <dd><a href="#">这是</a></dd>
+                                <dd><a href="#">二级</a></dd>
+                                <dd><a href="#">菜单</a></dd>
+                                <dd><a href="#">就行了</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">空调/冰箱/洗衣机/飞机</a>
+                        <div class="second-menu">
+                            <dl class="clearfix">    
+                                <dt><a href="#">肯德基</a></dt>
+                                <dd><a href="#">疯狂</a></dd>
+                                <dd><a href="#">星期四</a></dd>
+                                <dd><a href="#">还是</a></dd>
+                                <dd><a href="#">太贵</a></dd>
+                                <dd><a href="#">我不</a></dd>
+                                <dd><a href="#">吃了</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">你只</a></dt>
+                                <dd><a href="#">需要</a></dd>
+                                <dd><a href="#">知道</a></dd>
+                                <dd><a href="#">这是</a></dd>
+                                <dd><a href="#">二级</a></dd>
+                                <dd><a href="#">菜单</a></dd>
+                                <dd><a href="#">就行了</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">随便/写点/什么/填充一下</a>
+                        <div class="second-menu">
+                            <dl class="clearfix">    
+                                <dt><a href="#">肯德基</a></dt>
+                                <dd><a href="#">疯狂</a></dd>
+                                <dd><a href="#">星期四</a></dd>
+                                <dd><a href="#">还是</a></dd>
+                                <dd><a href="#">太贵</a></dd>
+                                <dd><a href="#">我不</a></dd>
+                                <dd><a href="#">吃了</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">你只</a></dt>
+                                <dd><a href="#">需要</a></dd>
+                                <dd><a href="#">去到</a></dd>
+                                <dd><a href="#">码头</a></dd>
+                                <dd><a href="#">整点</a></dd>
+                                <dd><a href="#">薯条</a></dd>
+                                <dd><a href="#">就行了</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">随便/写点/什么/填充一下</a>
+                        <div class="second-menu">
+                            <dl class="clearfix">    
+                                <dt><a href="#">肯德基</a></dt>
+                                <dd><a href="#">疯狂</a></dd>
+                                <dd><a href="#">星期四</a></dd>
+                                <dd><a href="#">还是</a></dd>
+                                <dd><a href="#">太贵</a></dd>
+                                <dd><a href="#">我不</a></dd>
+                                <dd><a href="#">吃了</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">你只</a></dt>
+                                <dd><a href="#">需要</a></dd>
+                                <dd><a href="#">去到</a></dd>
+                                <dd><a href="#">码头</a></dd>
+                                <dd><a href="#">整点</a></dd>
+                                <dd><a href="#">薯条</a></dd>
+                                <dd><a href="#">就行了</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">随便/写点/什么/填充一下</a>
+                        <div class="second-menu">
+                            <dl class="clearfix">    
+                                <dt><a href="#">肯德基</a></dt>
+                                <dd><a href="#">疯狂</a></dd>
+                                <dd><a href="#">星期四</a></dd>
+                                <dd><a href="#">还是</a></dd>
+                                <dd><a href="#">太贵</a></dd>
+                                <dd><a href="#">我不</a></dd>
+                                <dd><a href="#">吃了</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">你只</a></dt>
+                                <dd><a href="#">需要</a></dd>
+                                <dd><a href="#">去到</a></dd>
+                                <dd><a href="#">码头</a></dd>
+                                <dd><a href="#">整点</a></dd>
+                                <dd><a href="#">薯条</a></dd>
+                                <dd><a href="#">就行了</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 一级菜单 -->
+                        <a href="#">手机/运营/都是/电信诈骗</a>
+                        <div class="second-menu">
+                            <dl class="clearfix">
+                                <dt><a href="#">手机品牌</a></dt>
+                                <dd><a href="#">遥遥领先</a></dd>
+                                <dd><a href="#">华为</a></dd>
+                                <dd><a href="#">小米</a></dd>
+                                <dd><a href="#">vivo</a></dd>
+                                <dd><a href="#">oppo</a></dd>
+                                <dd><a href="#">垃圾苹果</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">垃圾回收</a></dt>
+                                <dd><a href="#">传家宝</a></dd>
+                                <dd><a href="#">50</a></dd>
+                                <dd><a href="#">rmb</a></dd>
+                                <dd><a href="#">不能</a></dd>
+                                <dd><a href="#">再多了</a></dd>
+                                <dd><a href="#">知道不</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">肯德基</a></dt>
+                                <dd><a href="#">疯狂</a></dd>
+                                <dd><a href="#">星期四</a></dd>
+                                <dd><a href="#">还是</a></dd>
+                                <dd><a href="#">太贵</a></dd>
+                                <dd><a href="#">我不</a></dd>
+                                <dd><a href="#">吃了</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">不知道</a></dt>
+                                <dd><a href="#">应该要</a></dd>
+                                <dd><a href="#">写什么</a></dd>
+                                <dd><a href="#">那就</a></dd>
+                                <dd><a href="#">随便</a></dd>
+                                <dd><a href="#">写一</a></dd>
+                                <dd><a href="#">点了</a></dd>
+                            </dl>
+                        </div>
+                    </li>   
+                    <li>
+                        <!-- 一级菜单 -->
+                        <a href="#">手机/可以/兑换/不锈钢盆</a>
+                        <div class="second-menu">
+                            <dl class="clearfix">
+                                <dt><a href="#">手机品牌</a></dt>
+                                <dd><a href="#">遥遥领先</a></dd>
+                                <dd><a href="#">华为</a></dd>
+                                <dd><a href="#">小米</a></dd>
+                                <dd><a href="#">vivo</a></dd>
+                                <dd><a href="#">oppo</a></dd>
+                                <dd><a href="#">垃圾苹果</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">垃圾回收</a></dt>
+                                <dd><a href="#">传家宝</a></dd>
+                                <dd><a href="#">50</a></dd>
+                                <dd><a href="#">rmb</a></dd>
+                                <dd><a href="#">不能</a></dd>
+                                <dd><a href="#">再多了</a></dd>
+                                <dd><a href="#">知道不</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">肯德基</a></dt>
+                                <dd><a href="#">疯狂</a></dd>
+                                <dd><a href="#">星期四</a></dd>
+                                <dd><a href="#">还是</a></dd>
+                                <dd><a href="#">太贵</a></dd>
+                                <dd><a href="#">我不</a></dd>
+                                <dd><a href="#">吃了</a></dd>
+                            </dl>
+                            <dl class="clearfix">    
+                                <dt><a href="#">不知道</a></dt>
+                                <dd><a href="#">应该要</a></dd>
+                                <dd><a href="#">写什么</a></dd>
+                                <dd><a href="#">那就</a></dd>
+                                <dd><a href="#">随便</a></dd>
+                                <dd><a href="#">写一</a></dd>
+                                <dd><a href="#">点了</a></dd>
+                            </dl>
+                        </div>
+                    </li>   
+                    <img src="./images/qyn.png" alt="">
+                </ul>
+                
+                <div class="banner leftfix">
+                    <img src="./images/banner-3.png" alt="">
+                </div>
+
+                <div class="side-other leftfix">
+                    <div class="news">
+                        <div class="title clearfix">
+                            <span class="leftfix">原神新闻</span>
+                            <a href="https://ys.mihoyo.com/main/news" class="rightfix" target="_blank">more&gt</a>
+                        </div>
+                        <ul class="news-list">
+                            <li><a href="https://ys.mihoyo.com/main/news/detail/29319" target="_blank">《原神》「神铸赋形」活动祈愿现已开启</a></li>
+                            <li><a href="https://ys.mihoyo.com/main/news/detail/29318" target="_blank">《原神》「心珠循琅」活动祈愿现已开启</a></li>
+                            <li><a href="https://ys.mihoyo.com/main/news/detail/29317" target="_blank">《原神》「众水的颂诗」活动祈愿现已开启</a></li>
+                            <li><a href="https://ys.mihoyo.com/main/news/detail/29563" target="_blank">《原神》「七圣召唤」热斗模式：列阵斗巧</a></li>
+                        </ul>
+                    </div>
+                    <div class="other-nav"  onclick="click1()">
+                        <ul class="other-nav-list clearfix" >
+                            <li>
+                                <div class="picture"></div>
+                                <span>富强</span>
+                            </li>
+                            <li>
+                                <div class="picture"></div>
+                                <span>民主</span>
+                            </li>
+                            <li>
+                                <div class="picture"></div>
+                                <span>文明</span>
+                            </li>
+                            <li>
+                                <div class="picture"></div>
+                                <span>和谐</span>
+                            </li>
+                        </ul>
+                        <ul class="other-nav-list clearfix">
+                            <li>
+                                <div class="picture"></div>
+                                <span>自由</span>
+                            </li>
+                            <li>
+                                <div class="picture"></div>
+                                <span>平等</span>
+                            </li>
+                            <li>
+                                <div class="picture"></div>
+                                <span>公正</span>
+                            </li>
+                            <li>
+                                <div class="picture"></div>
+                                <span>法治</span>
+                            </li>
+                        </ul>
+                        <ul class="other-nav-list clearfix">
+                            <li>
+                                <div class="picture"></div>
+                                <span>爱国</span>
+                            </li>
+                            <li>
+                                <div class="picture"></div>
+                                <span>敬业</span>
+                            </li>
+                            <li>
+                                <div class="picture"></div>
+                                <span>诚信</span>
+                            </li>
+                            <li>
+                                <div class="picture"></div>
+                                <span>友善</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 底部图像bottom_pic -->
+        <div class="bottom-pic clearfix">
+            <div class="container">
+                <img src="./images/seckill.png" alt="p0">
+                <img src="./images/banner1.png" alt="p1">
+                <img src="./images/banner2.png" alt="p2">
+                <img src="./images/banner3.png" alt="p3">
+                <img src="./images/baner4.png" alt="p4">
+            </div>
+        </div>
+
+        <!-- 楼层floor -->
+        <div class="floor">
+            <div class="container">
+                <!-- upper -->
+                    <div class="floor-nav clearfix">
+                        <span class="floor-name leftfix">家用电器</span>
+                        <ul class="floor-nav-list rightfix clearfix">
+                            <li><a href="#">我是文本</a></li>
+                            <li><a href="#">我是文本</a></li>
+                            <li><a href="#">我也是文本</a></li>
+                            <li><a href="#">我还是文本</a></li>
+                        </ul>
+                    </div>
+                <!-- lower -->
+                <div class="floor-info clearfix">
+                    <div class="floor-info-item item1">
+                        <ul class="item1-list clearfix">
+                            <li><a href="#">电磁炮</a></li>
+                            <li><a href="#">电浆炮</a></li>
+                            <li><a href="#">迫击炮</a></li>
+                            <li><a href="#">轨道炮</a></li>
+                            <li><a href="#">激光炮</a></li>
+                            <li><a href="#">加农炮</a></li>
+                        </ul>
+                        <img src="./images/编组.png" alt="">
+                    </div>
+                    <div class="floor-info-item item2">
+                        <img src="./images/appliance_banner07.png" alt="">
+                    </div>
+                    <div class="floor-info-item item3">
+                        <img src="./images/微波炉.png" alt="">
+                        <img src="./images/空气炸锅.png" alt="">
+                    </div>
+                    <div class="floor-info-item item4">
+                        <img src="./images/冰箱.png" alt="">
+                    </div>
+                    <div class="floor-info-item item5">
+                        <img src="./images/电饭煲.png" alt="">
+                        <img src="./images/电饭煲2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚footer -->
+        <div class="footer">
+            <div class="container">
+                <!-- 顶部链接 -->
+                <div class="top-links clearfix">
+                    <ul class="links-list">
+                        <li><a href="#">原神指南</a></li>
+                    </ul>
+                    <ul class="links-list">
+                        <li><a href="#">原神指南</a></li>
+
+                    </ul>
+                    <ul class="links-list">
+                        <li><a href="#">原神指南</a></li>
+
+                    </ul>
+                    <ul class="links-list">
+                        <li><a href="#">原神指南</a></li>
+
+                    </ul>
+                    <ul class="links-list">
+                        <li><a href="#">原神指南</a></li>
+
+                    </ul>
+                    <ul class="links-list">
+                        <li><a href="#">原神指南</a></li>
+
+                    </ul>
+                </div>
+                <!-- 分割线 -->
+                <div class="line"></div>
+                <!-- 底部 -->
+                <div class="bottom-links">
+                    <ul class="bottom-links-list clearfix">
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">合作招商</a></li>
+                        <li><a href="#">商家帮助</a></li>
+                    </ul>
+                </div>
+                <div class="beian">
+                    <span>没YOU备123456789</span>
+                </div>
+            </div>
+            
+        </div>
+</body>
+<script src="js/index.js"></script>
+</html>
